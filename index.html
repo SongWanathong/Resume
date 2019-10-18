@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Resume</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
     <style>
         #hname {
@@ -33,9 +32,58 @@
             float: left
         }
 
+        .next {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3e%3cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3e%3c/svg%3e");
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: no-repeat 50%/100% 100%;
+            color: #fff;
+            text-align: center;
+            float: right;
+            margin-right: 10px;
+            ;
+        }
 
+        #tb {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
 
+        #tb td,
+        #tb th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
 
+        #tb tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        #tb tr:hover {
+            background-color: #ddd;
+        }
+
+        #tb th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #343a40;
+            color: white;
+        }
+
+        .button {
+            background-color: #343a40;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
 
 
 
@@ -70,9 +118,13 @@
 
 <body style="font-family: 'Kanit', sans-serif; margin: 0; padding: 0;background: #343a40;">
 
+    <a href="#"> <img class="next" onclick="random_bg_color()" src="img/13-512.png" aria-hidden="true" alt=""></a>
+
     <header style=" margin: 0 auto; ">
-        <h1 id="hname" style="text-align: center; width: 100%;
+        <a href="#" style="text-decoration: none;" onclick="changename()">
+            <h1 id="hname" style="text-align: center; width: 100%; 
         height: 100%;color: #fff;">Jakdaw Wanathong</h1>
+        </a>
 
         <img id="img1" src="img/71924261_2627663647296404_5812611195680587776_o.jpg" alt="jakdaw wanathong">
         <div class="rf">
@@ -123,7 +175,61 @@
 
         <section class="sec" s>
             <p style="text-align: center;"> ทักษะและความสามารถในด้านอื่นๆ</p>
-            <ul>
+            <table id="tb">
+                <tr>
+                    <th>
+                        ทักษะและความสามารถในด้านอื่นๆ
+                    </th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <td>
+                        สามารถพูด อ่าน เขียน ภาษาอังกฤษพอใช้
+                    </td>
+                    <td><button id="1" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        มีทักษะในการซ่อมบำรุงคอมพิวเตอร์ อุปกรณ์ต่อพ่วง อุปกรณ์สำรองไฟและเครื่องพิมพ์ได้เป็นอย่างดี
+                    </td>
+                    <td><button id="2" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        สามารถแก้ไขปัญหา Hardware ,Software , Network ได้
+                    </td>
+                    <td><button id="3" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        มีความรู้เกี่ยวกับระบบ Network และสามารถดูแลระบบ Network ได้
+                    </td>
+                    <td><button id="4" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        สามารถใช้งาน Software ต่างๆ ได้เป็นอย่างดี เช่น Microsoft Office , Photoshop , Lightloom
+                    </td>
+                    <td><button id="5" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        สามารถให้คำปรึกษาหรือแนะนำให้กับ User ได้
+                    </td>
+                    <td><button id="6" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+                <tr>
+                    <td>
+                        มีความรับผิดชอบและมีมนุษยสัมพันธ์ที่ดี
+                    </td>
+                    <td><button id="7" onclick="deleteRow(id)">ลบข้อมูล</button></td>
+                </tr>
+
+
+            </table>
+            <button class="button" type="button" onclick="showdata()">เพิ่มสกิล</button>
+
+            <!-- <ul>
                 <li>สามารถพูด อ่าน เขียน ภาษาอังกฤษพอใช้</li>
                 <li>สามารถวิเคราะห์แหละแก้ปัญหาของคอมพิวเตอร์ได้เป็นอย่างดี</li>
                 <li>มีทักษะในการซ่อมบำรุงคอมพิวเตอร์ อุปกรณ์ต่อพ่วง อุปกรณ์สำรองไฟและเครื่องพิมพ์ได้เป็นอย่างดี</li>
@@ -133,7 +239,7 @@
                 <li>สามารถให้คำปรึกษาหรือแนะนำให้กับ User ได้</li>
                 <li>มีความรับผิดชอบและมีมนุษยสัมพันธ์ที่ดี</li>
 
-            </ul>
+            </ul> -->
         </section>
 
 
@@ -143,6 +249,7 @@
         <p>Copyright 2019</p>
         <a style="text-decoration: none; color: #0c09c7;" href="https://www.facebook.com/SongWanathong">Facebook</a>
     </footer>
+    <script src="index.js"></script>
 
 </body>
 
